@@ -11,7 +11,7 @@ namespace CSUnitTest
 {
     public class Setting
     {
-        public const string ConfigFile = "setting.xml";
+        public const string ConfigFile = "test_setting.xml";
 
         public static Setting GetSetting()
         {
