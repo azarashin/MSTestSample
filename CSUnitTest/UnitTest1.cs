@@ -1,7 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Remote; 
+using OpenQA.Selenium.Remote;
+using System;
 
 namespace CSUnitTest
 {
@@ -11,10 +13,10 @@ namespace CSUnitTest
         [TestMethod]
         public void TestMethod1()
         {
-            FirefoxOptions firefoxOptions = new FirefoxOptions();
-            using (IWebDriver driver = new RemoteWebDriver(firefoxOptions))
+            Setting setting = Setting.GetSetting(); 
+            using (IWebDriver driver = new RemoteWebDriver(new Uri(setting.WebDriverUrl), setting.Option()))
             {
-                driver.Navigate().GoToUrl("https://www.bing.com/");
+                driver.Navigate().GoToUrl(setting.TestTargetUrl);
                 driver.Quit(); 
             }
         }

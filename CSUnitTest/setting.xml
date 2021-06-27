@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Setting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WebDriverUrl>http://localhost:4445/wd/hub</WebDriverUrl>
+  <!-- firefox, chrome, edge, opera -->
+  <BrowserType>firefox</BrowserType>
+  <TestTargetUrl>https://www.bing.com/</TestTargetUrl>
+
+</Setting>
